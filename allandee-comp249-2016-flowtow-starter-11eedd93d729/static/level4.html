@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FlowTow Requirements</title>
+
+    <style>
+    body {
+      padding-top: 50px;
+      width: 60%;
+      margin: auto;
+      font-family: sans-serif;
+    }
+    h1 {
+    	text-align: center;
+    }
+    .alert {
+        background: pink;
+        padding: 10px;
+    }
+        </style>
+
+  </head>
+
+  <body>
+
+	<h1>Level 4</h1>
+
+        <p>&lt;&lt; <a href="level3.html">Level 3</a> </p>
+
+
+	 <h2>Functional requirements</h2>
+
+	  <p>Note that there are no automatic tests for this level. I've not yet found a way to
+		  test file upload from Selenium.  To verify the functionality you can perform
+		  the following tests manually.</p>
+
+	 <p>As for level three plus:</p>
+
+	 <ul class="list-group">
+		<li class="list-group-item">As a registered user, when I load the "My Images" page
+			I see a form that has a file selection input and a button labelled "Upload Image".
+		<div  class='bg-info'>
+			<ul>
+				<li>The upload form will have the id <code>uploadform</code></li>
+				<li>The <code>action</code> attribute of the form will be <code>/upload</code></li>
+                <li>The file field in the form will have the name attribute <code>imagefile</code>.</li>
+			</ul>
+		</div>
+		</li>
+
+		<li class="list-group-item">As a registered user, when I load the "My Images" page and select a file and then
+			click on the "Upload Image" button my image file is uploaded to the site.  The
+			page that is returned is the "My Images" page and the newly uploaded
+			image is the first image on the page. </li>
+
+		<li class="list-group-item">As an unregistered user (not logged in) if I try to upload
+        an image by accessing the /upload URL directly, I get a redirect response back to the home page.</li>
+
+	 </ul>
+
+	 <h2>Your Task</h2>
+
+	<p>To achieve these requirements you will need to implement a file upload form
+		that stores a new image file in the images folder. </p>
+
+
+	<p>The following chapters in the notes may be useful:</p>
+
+	<ul>
+		<li><a href="http://pwp.stevecassidy.net/bottle/file-upload.html">Uploading Files</a>
+		</li>
+	</ul>
+
+
+    <footer class='footer'>
+    <hr>
+      <div class='container'>
+        <p>FlowTow is a class project for COMP249 at Macquarie University</p>
+        <p>Copyright &copy; <a href="http://web.science.mq.edu.au/~cassidy/">Steve Cassidy</a>, 2016</p>
+      </div>
+    </footer>
+    </div>
+
+  </body>
+</html>
