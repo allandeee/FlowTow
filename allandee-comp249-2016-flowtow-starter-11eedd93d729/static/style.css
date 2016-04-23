@@ -1,0 +1,322 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top {
+    width: 100%;
+    background-color: white;
+}
+
+.nav {
+    color: gray;
+    display: inline-block;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    font-size: 15px;
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav li a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 300px 5px 5px;
+    text-decoration: none;
+    padding-top: 0;
+}
+
+.nav li a:link {
+    color: black;
+}
+
+.nav li a:visited {
+    color: gray;
+}
+
+.nav li a:hover {
+    color: red;
+}
+
+#logbutton {
+    background-color: #404040;
+    border: none;
+    color: white;
+    padding: 5px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Crimson Text', serif;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#logbutton:hover {
+    background-color: #666666;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#logo {
+    max-width: 120px;
+}
+
+.content {
+    display: block;
+    font-family: 'Crimson Text', serif;
+}
+
+.flowtow {
+    display: inline-block;
+    background-color: white;
+    max-width: 400px;
+    margin: 50px;
+    text-align: left;
+}
+
+.image {
+    margin: 7px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.flowtow .date {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: normal;
+    font-size: 12px;
+    float: right;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.flowtow .user {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.flowtow .likediv {
+    font-size: 14px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.flowtow .likediv .likes {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.flowtow .likebutton {
+    float: right;
+    background-color: #B3B6B7;
+    border: none;
+    color: white;
+    padding: 5px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.flowtow .likebutton:hover {
+    cursor: pointer;
+    background-color: #F1948A;
+}
+
+.flowtow .likeClicked {
+    background-color: #E74C3C;
+}
+
+.text {
+    display: inline-block;
+    text-align: left;
+    max-width: 1200px;
+    margin: 50px 10px;
+    padding: 0 20px;
+    background-color: white;
+    font-family: 'Crimson Text', serif;
+}
+
+.text h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
