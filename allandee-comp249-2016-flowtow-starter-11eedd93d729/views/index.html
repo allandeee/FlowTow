@@ -1,0 +1,85 @@
+% rebase('base.tpl')
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FlowTow</title>
+    <link rel="icon" type="image/png" href="static/images/tab-logo.png" sizes="16x16">
+
+    <link rel='stylesheet' href='../static/style.css' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.likebutton').click(function (e) {
+                $(this).toggleClass('likeClicked');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class='top'>
+
+            <ul class='nav'>
+                <li>
+                    <a id="logo" href="/"><img src="../static/images/logo.png"></a>
+                </li>
+                <li><a href="#">MY IMAGES</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li>
+                    <button id="logbutton">LOG IN</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class='content'>
+
+            <div class='flowtow'>
+                <div class='image'>
+                    <img src="../static/images/spider_gwen_by_mz09-d8j7cis.jpg" alt="window">
+                    <p class='date'>04/01 - 07:13pm</p>
+                    <p class='user'>Bobalooba</p>
+                    <p class='likediv'><b class="likes">3</b> likes</p>
+                    <div class='likebutton'>LIKE</div>
+                </div>
+            </div>
+
+            <div class='flowtow'>
+                <div class='image'>
+                    <img src="../static/images/tumblr_nk8cpsvQdN1qco68qo1_1280.jpg" alt="cycling">
+                    <p class='date'>04/01 - 07:13pm</p>
+                    <p class='user'>Bobalooba</p>
+                    <p class='likediv'><b class="likes">3</b> likes</p>
+                    <div class='likebutton'>LIKE</div>
+                </div>
+            </div>
+
+            <div class='flowtow'>
+                <div class='image'>
+                    <img src="../static/images/princess-bubblegum.jpg" alt="hang-glider">
+                    <p class='date'>04/01 - 07:13pm</p>
+                    <p class='user'>Bobalooba</p>
+                    <p class='likediv'><b class="likes">3</b> likes</p>
+                    <form method="post">
+                        <div class='likebutton'>LIKE</div>
+                        <input type="hidden" name="filename" value="princess-bubblegum.jpg">
+                        <!--hidden field for usernick (the user liking image)-->
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
