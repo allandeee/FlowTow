@@ -15,7 +15,7 @@ application = Bottle()
 @application.route('/')
 def index():
 
-    return template('index', title="FlowTow!")
+    return template('index', title="FlowTow")
 
 
 @application.post('/like')
