@@ -34,7 +34,7 @@
 
             <ul class='nav'>
                 <li>
-                    <div id="logo" href="/"></div>
+                    <a id="logo" href="/">FlowTow</a>
                 </li>
                 <li><a href="#">MY IMAGES</a></li>
                 <li><a href="/about">ABOUT</a></li>
@@ -46,45 +46,11 @@
 
         <div class='content'>
 
-            <div class='flowtow'>
-                <div class='image'>
-                    <img src="/static/images/spider_gwen_by_mz09-d8j7cis.jpg" alt="window">
-                    <p class='date'>04/01 - 07:13pm</p>
-                    <p class='user'>Bobalooba</p>
-                    <p class='likediv'><b class="likes">3</b> likes</p>
-                    <div class='likebutton'>LIKE</div>
-                </div>
-            </div>
-
-            <div class='flowtow'>
-                <div class='image'>
-                    <img src="/static/images/tumblr_nk8cpsvQdN1qco68qo1_1280.jpg" alt="cycling">
-                    <p class='date'>04/01 - 07:13pm</p>
-                    <p class='user'>Bobalooba</p>
-                    <p class='likediv'><b class="likes">3</b> likes</p>
-                    <div class='likebutton'>LIKE</div>
-                </div>
-            </div>
-
-            <div class='flowtow'>
-                <div class='image'>
-                    <img src="/static/images/princess-bubblegum.jpg" alt="hang-glider">
-                    <p class='date'>04/01 - 07:13pm</p>
-                    <p class='user'>Bobalooba</p>
-                    <p class='likediv'><b class="likes">3</b> likes</p>
-                    <form method="post">
-                        <div class='likebutton'>LIKE</div>
-                        <input type="hidden" name="filename" value="princess-bubblegum.jpg">
-                        <!--hidden field for usernick (the user liking the image)-->
-                    </form>
-                </div>
-            </div>
-
             % for img in images:
 
             <div class='flowtow'>
                 <div class='image'>
-                    <img src="/static/images/{{img['filename']}}" alt={{img['filename'].split(".")[0]}}>
+                    <img src="/static/images/{{img['filename']}}" alt={{img[ 'filename'].split( ".")[0]}}>
                     <p class='date'>{{img['timestamp']}}</p>
                     <p class='user'>{{img['user']}}</p>
                     <p class='likediv'><b class="likes">{{img['likes']}}</b> likes</p>

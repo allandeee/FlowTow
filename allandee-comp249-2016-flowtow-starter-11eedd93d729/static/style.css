@@ -220,10 +220,15 @@ body {
 }
 
 #logo {
-    width: 120px;
-    height: 60px;
-    background-image: url(/static/images/logo.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px 300px 2px 5px;
+    width: 160px;
+    height: 40px;
+    background-image: url(images/logo.png);
     background-repeat: none;
+    background-size: cover;
+    text-indent: -9999px;
 }
 
 .content {

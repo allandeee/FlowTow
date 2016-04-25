@@ -34,19 +34,41 @@ def list_images(db, n, usernick=None):
 
 def add_image(db, filename, usernick):
     """Add this image to the database for the given user"""
-
-
-
+    cur = db.cursor()
+    sql = """
+    insert into images (filename, usernick) values (?, ?);
+    """
+    cur.execute(sql, (filename, usernick))
+    db.commit()
 
 
 def add_like(db, filename, usernick=None):
     """Increment the like count for this image"""
     cur = db.cursor()
+
     sql = """
-    insert into likes values (?, ?);
+    select exists(
+    select 1 from users where nick=?
+    );
     """
-    cur.execute(sql, (filename, usernick))
-    db.commit()
+    cur.execute(sql, (usernick,))
+    user_exists = cur.fetchone()[0]
+
+    if user_exists==1 or usernick is None:
+        sql = """
+        select exists(
+        select 1 from images where filename=?
+        );
+        """
+        cur.execute(sql, (filename,))
+        img_exists = cur.fetchone()[0]
+        if img_exists==1:
+
+            sql = """
+            insert into likes values (?, ?);
+            """
+            cur.execute(sql, (filename, usernick))
+            db.commit()
 
 
 def count_likes(db, filename):
