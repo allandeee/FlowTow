@@ -2,7 +2,7 @@
 @author:
 '''
 
-from bottle import Bottle, template, debug, static_file, request
+from bottle import Bottle, template, debug, static_file, request, redirect
 import interface
 import users
 from database import COMP249Db
@@ -20,11 +20,11 @@ def index():
     return template('index', title="FlowTow", images=img_list)
 
 
-@application.post('/like')
+@application.post('/')
 def like_img():
     img_liked = request.forms('filename')
     interface.add_like(COMP249Db, img_liked)
-    pass
+    redirect('/')
 
 
 @application.route('/about')
