@@ -220,7 +220,10 @@ body {
 }
 
 #logo {
-    max-width: 120px;
+    width: 120px;
+    height: 60px;
+    background-image: url(/static/images/logo.png);
+    background-repeat: none;
 }
 
 .content {

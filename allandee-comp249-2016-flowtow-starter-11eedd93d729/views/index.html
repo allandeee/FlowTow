@@ -34,7 +34,7 @@
 
             <ul class='nav'>
                 <li>
-                    <a id="logo" href="/"><img src="/static/images/logo.png"></a>
+                    <div id="logo" href="/"></div>
                 </li>
                 <li><a href="#">MY IMAGES</a></li>
                 <li><a href="/about">ABOUT</a></li>
@@ -86,7 +86,7 @@
                 <div class='image'>
                     <img src="/static/images/{{img['filename']}}" alt={{img['filename'].split(".")[0]}}>
                     <p class='date'>{{img['timestamp']}}</p>
-                    <p class='user'>Bobalooba</p>
+                    <p class='user'>{{img['user']}}</p>
                     <p class='likediv'><b class="likes">{{img['likes']}}</b> likes</p>
                     <form method="post">
                         <div class='likebutton'>LIKE</div>
