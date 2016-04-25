@@ -42,9 +42,9 @@ def add_like(db, filename, usernick=None):
     """Increment the like count for this image"""
     cur = db.cursor()
     sql = """
-    insert into likes values (%s, %s);
+    insert into likes values (?, ?);
     """
-    cur.execute(sql % (filename, usernick))
+    cur.execute(sql, (filename, usernick))
     db.commit()
 
 
@@ -52,10 +52,10 @@ def count_likes(db, filename):
     """Count the number of likes for this filename"""
     cur = db.cursor()
     sql = """
-    select count(filename) from likes [where filename=%s];
+    select count(filename) from likes where filename=?;
     """
-    like_sum = cur.execute(sql % (filename,))
-    print(like_sum)
+    cur.execute(sql, (filename,))
+    like_sum = cur.fetchone()[0]
     return like_sum
 
 
@@ -63,4 +63,6 @@ if __name__ == "__main__":
     db = database.COMP249Db()
     db.create_tables()
     db.sample_data()
+    list_images(db, 3)
+    add_like(db, "cycling.jpg")
     list_images(db, 3)
