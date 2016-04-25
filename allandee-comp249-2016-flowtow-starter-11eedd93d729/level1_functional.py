@@ -35,7 +35,7 @@ class Level1FunctionalTests(unittest.TestCase):
         images = result.html.find_all('img')
 
         # expect to find three images
-        self.assertEqual(3, len(images), "Wrong number of images found")
+        self.assertEqual(4, len(images), "Wrong number of images found")    # originally 3 expected images
 
         flowtows = result.html.find_all(class_='flowtow')
 

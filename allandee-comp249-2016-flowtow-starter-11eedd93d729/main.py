@@ -15,7 +15,9 @@ application = Bottle()
 @application.route('/')
 def index():
 
-    return template('index', title="FlowTow")
+    db = COMP249Db()
+    img_list = interface.list_images(db, 3)
+    return template('index', title="FlowTow", images=img_list)
 
 
 @application.post('/like')

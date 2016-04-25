@@ -29,6 +29,7 @@ def list_images(db, n, usernick=None):
         i_dict['likes'] = count_likes(db, i_dict['filename'])
         dict_list.append(i_dict)
     print(dict_list)
+    return dict_list
 
 
 def add_image(db, filename, usernick):
