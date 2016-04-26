@@ -55,10 +55,9 @@
                     <p class='user'>{{img['user']}}</p>
                     <p class='likediv'><b class="likes">{{img['likes']}}</b> likes</p>
                     <form method="post">
-                        <div class='likebutton'>LIKE
-                            <input type="hidden" name="filename" value="{{img['filename']}}">
-                            <!--hidden field for usernick (the user liking the image)-->
-                        </div>
+                        <input type="hidden" name="filename" value="{{img['filename']}}">
+                        <!--hidden field for usernick (the user liking the image)-->
+                        <input type="submit" value="LIKE" class='likebutton'>
                     </form>
                 </div>
             </div>

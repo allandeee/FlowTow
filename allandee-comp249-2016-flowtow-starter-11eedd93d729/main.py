@@ -15,15 +15,14 @@ application = Bottle()
 @application.route('/')
 def index():
 
-    db = COMP249Db()
     img_list = interface.list_images(db, 3)
     return template('index', title="FlowTow", images=img_list)
 
 
 @application.post('/')
 def like_img():
-    img_liked = request.forms('filename')
-    interface.add_like(COMP249Db, img_liked)
+    img_liked = request.forms.get('filename')
+    interface.add_like(db, img_liked)
     redirect('/')
 
 
@@ -39,5 +38,6 @@ def static(filename):
 
 
 if __name__ == '__main__':
+    db = COMP249Db()
     debug()
     application.run()
