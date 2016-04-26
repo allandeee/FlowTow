@@ -12,6 +12,9 @@ COOKIE_NAME = 'sessionid'
 
 application = Bottle()
 
+db = COMP249Db()
+
+
 @application.route('/')
 def index():
 
@@ -19,7 +22,7 @@ def index():
     return template('index', title="FlowTow", images=img_list)
 
 
-@application.post('/')
+@application.post('/like')
 def like_img():
     img_liked = request.forms.get('filename')
     interface.add_like(db, img_liked)
@@ -38,6 +41,5 @@ def static(filename):
 
 
 if __name__ == '__main__':
-    db = COMP249Db()
     debug()
     application.run()

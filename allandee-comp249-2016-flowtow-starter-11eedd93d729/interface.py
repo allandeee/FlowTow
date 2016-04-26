@@ -19,7 +19,6 @@ def list_images(db, n, usernick=None):
     """
     cur.execute(sql % (n,))
     img_list = (list(cur))
-    print(img_list)
     dict_list = []
     for i in img_list:
         i_dict = dict()
@@ -28,7 +27,6 @@ def list_images(db, n, usernick=None):
         i_dict['user'] = i[2]
         i_dict['likes'] = count_likes(db, i_dict['filename'])
         dict_list.append(i_dict)
-    print(dict_list)
     return dict_list
 
 

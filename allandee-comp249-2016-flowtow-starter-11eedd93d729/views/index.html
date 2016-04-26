@@ -15,6 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
@@ -36,8 +37,8 @@
                 <li>
                     <a id="logo" href="/">FlowTow</a>
                 </li>
-                <li><a href="#">MY IMAGES</a></li>
-                <li><a href="/about">ABOUT</a></li>
+                <li><a href="#">My Images</a></li>
+                <li><a href="/about">About this site</a></li>
                 <li>
                     <button id="logbutton">LOG IN</button>
                 </li>
@@ -45,7 +46,9 @@
         </div>
 
         <div class='content'>
-
+            <div>
+                <h1 id="banner">Welcome to FlowTow</h1>
+            </div>
             % for img in images:
 
             <div class='flowtow'>
@@ -54,10 +57,10 @@
                     <p class='date'>{{img['timestamp']}}</p>
                     <p class='user'>{{img['user']}}</p>
                     <p class='likediv'><b class="likes">{{img['likes']}}</b> likes</p>
-                    <form method="post">
+                    <form action="/like" method="post">
                         <input type="hidden" name="filename" value="{{img['filename']}}">
                         <!--hidden field for usernick (the user liking the image)-->
-                        <input type="submit" value="LIKE" class='likebutton'>
+                        <input type="submit" value="Like" class='likebutton'>
                     </form>
                 </div>
             </div>
