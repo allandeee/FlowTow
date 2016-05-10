@@ -32,17 +32,25 @@
 
     <div class="container">
         <div class='top'>
+            <form id="loginform" action="/login">
+                <ul class='nav'>
+                    <li>
+                        <a id="logo" href="/">FlowTow</a>
+                    </li>
+                    <li><a href="#">My Images</a></li>
+                    <li><a href="/about">About this site</a></li>
 
-            <ul class='nav'>
-                <li>
-                    <a id="logo" href="/">FlowTow</a>
-                </li>
-                <li><a href="#">My Images</a></li>
-                <li><a href="/about">About this site</a></li>
-                <li>
-                    <button id="logbutton">LOG IN</button>
-                </li>
-            </ul>
+                    <li>Nick:
+                        <input name="nick">
+                    </li>
+                    <li>Password:
+                        <input name="password">
+                    </li>
+                    <li>
+                        <input type="submit" value="LOGIN" id="logbutton">
+                    </li>
+                </ul>
+            </form>
         </div>
 
         <div class='content'>

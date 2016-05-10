@@ -12,18 +12,18 @@ COOKIE_NAME = 'sessionid'
 
 application = Bottle()
 
-db = COMP249Db()
-
 
 @application.route('/')
+@application.post('/')
 def index():
-
+    db = COMP249Db()
     img_list = interface.list_images(db, 3)
     return template('index.html', title="FlowTow", images=img_list)
 
 
 @application.post('/like')
 def like_img():
+    db = COMP249Db()
     img_liked = request.forms.get('filename')
     interface.add_like(db, img_liked)
     redirect('/')
