@@ -19,7 +19,7 @@ db = COMP249Db()
 def index():
 
     img_list = interface.list_images(db, 3)
-    return template('index', title="FlowTow", images=img_list)
+    return template('index.html', title="FlowTow", images=img_list)
 
 
 @application.post('/like')
@@ -32,7 +32,7 @@ def like_img():
 @application.route('/about')
 def aboutpg():
 
-    return template('aboutpg', title="About")
+    return template('aboutpg.html', title="About")
 
 
 @application.route('/static/<filename:path>')
