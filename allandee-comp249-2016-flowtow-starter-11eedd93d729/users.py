@@ -18,6 +18,24 @@ def generate_session(db, usernick):
     There should only be one session per user at any time, if there
     is already a session active, use the existing sessionid in the cookie
     """
+    curr_session = bottle.request.get_cookie(COOKIE_NAME)
+    if curr_session:
+        return curr_session
+
+    cur = db.cursor()
+
+    sql = """
+    select exists(
+    select 1 from users where nick=?
+    );
+    """
+    cur.execute(sql, (usernick,))
+    user_exists = cur.fetchone()[0]
+
+    if user_exists==1:
+        bottle.response.set_cookie(COOKIE_NAME, db.encode(usernick))
+    else:
+        return None
 
 
 

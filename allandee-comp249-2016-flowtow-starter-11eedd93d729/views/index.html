@@ -32,7 +32,7 @@
 
     <div class="container">
         <div class='top'>
-            <form id="loginform" action="/login">
+            <form method="post" id="loginform" action="/login">
                 <ul class='nav'>
                     <li>
                         <a id="logo" href="/">FlowTow</a>
@@ -40,15 +40,28 @@
                     <li><a href="#">My Images</a></li>
                     <li><a href="/about">About this site</a></li>
 
+                    % if session:
+
+                    <li>
+                        Logged in as {{name}}
+                    </li>
+                    <li>
+                        <input type="submit" value="LOGOUT" class="logbutton">
+                    </li>
+
+                    % else:
+
                     <li>Nick:
                         <input name="nick">
                     </li>
                     <li>Password:
-                        <input name="password">
+                        <input type="password" name="password">
                     </li>
                     <li>
-                        <input type="submit" value="LOGIN" id="logbutton">
+                        <input type="submit" value="LOGIN" class="logbutton">
                     </li>
+
+                    % end
                 </ul>
             </form>
         </div>

@@ -197,7 +197,7 @@ body {
     color: red;
 }
 
-#logbutton {
+.logbutton {
     background-color: #404040;
     border: none;
     color: white;
@@ -213,7 +213,7 @@ body {
     transition-duration: 0.4s;
 }
 
-#logbutton:hover {
+.logbutton:hover {
     background-color: #666666;
     cursor: pointer;
     cursor: hand;
