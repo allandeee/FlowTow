@@ -32,25 +32,25 @@
 
     <div class="container">
         <div class='top'>
-            <form method="post" id="loginform" action="/login">
-                <ul class='nav'>
-                    <li>
-                        <a id="logo" href="/">FlowTow</a>
-                    </li>
-                    <li><a href="#">My Images</a></li>
-                    <li><a href="/about">About this site</a></li>
 
-                    % if session:
+            <ul class='nav'>
+                <li>
+                    <a id="logo" href="/">FlowTow</a>
+                </li>
+                <li><a href="#">My Images</a></li>
+                <li><a href="/about">About this site</a></li>
 
+                % if session:
+                <form method="post" id="logoutform" action="/logout">
                     <li>
                         Logged in as {{name}}
                     </li>
                     <li>
                         <input type="submit" value="LOGOUT" class="logbutton">
                     </li>
-
-                    % else:
-
+                </form>
+                % else:
+                <form method="post" id="loginform" action="/login">
                     <li>Nick:
                         <input name="nick">
                     </li>
@@ -60,10 +60,11 @@
                     <li>
                         <input type="submit" value="LOGIN" class="logbutton">
                     </li>
+                </form>
 
-                    % end
-                </ul>
-            </form>
+                % end
+            </ul>
+
         </div>
 
         <div class='content'>

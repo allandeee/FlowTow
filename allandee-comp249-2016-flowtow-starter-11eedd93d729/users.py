@@ -18,11 +18,11 @@ def generate_session(db, usernick):
     There should only be one session per user at any time, if there
     is already a session active, use the existing sessionid in the cookie
     """
-    curr_session = bottle.request.get_cookie(COOKIE_NAME)
-    if curr_session:
-        return curr_session
-
     cur = db.cursor()
+
+    curr_user = session_user(db)
+    if curr_user:
+        return db.encode(curr_user)     # can be assumed the sessionid in db is the same
 
     sql = """
     select exists(
@@ -33,7 +33,13 @@ def generate_session(db, usernick):
     user_exists = cur.fetchone()[0]
 
     if user_exists==1:
-        bottle.response.set_cookie(COOKIE_NAME, db.encode(usernick))
+        session_key = db.encode(usernick)
+        sql = """
+        insert into sessions (sessionid, usernick) values (?, ?);
+        """
+        cur.execute(sql, (session_key, usernick))
+        db.commit()
+        bottle.response.set_cookie(COOKIE_NAME, session_key)
     else:
         return None
 
@@ -41,6 +47,12 @@ def generate_session(db, usernick):
 
 def delete_session(db, usernick):
     """remove all session table entries for this user"""
+    cur = db.cursor()
+    sql = """
+    delete from sessions where usernick=?;
+    """
+    cur.execute(sql, (usernick,))
+    db.commit()
 
 
 
@@ -48,3 +60,14 @@ def session_user(db):
     """try to
     retrieve the user from the sessions table
     return usernick or None if no valid session is present"""
+    cur = db.cursor()
+    sql = """
+    select usernick from sessions;
+    """
+    cur.execute(sql)
+    curr_user = cur.fetchone()
+    if curr_user:
+        print(curr_user)
+        return curr_user[0]
+    else:
+        return None

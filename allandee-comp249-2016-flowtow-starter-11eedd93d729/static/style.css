@@ -177,6 +177,11 @@ body {
     vertical-align: middle;
 }
 
+.nav form {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .nav li a {
     display: inline-block;
     vertical-align: middle;

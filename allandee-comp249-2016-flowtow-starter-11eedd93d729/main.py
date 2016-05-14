@@ -27,7 +27,20 @@ def index():
 def login():
     db = COMP249Db()
     if 'nick' in request.forms:
-        users.generate_session(db, request.forms['nick'])
+        curr_session = None
+        curr_session = users.generate_session(db, request.forms['nick'])
+        if curr_session:
+            response.set_cookie(COOKIE_NAME, curr_session)
+    redirect('/')
+
+
+@application.post('/logout')
+def logout():
+    db = COMP249Db()
+    curr_user = users.session_user(db)
+    if curr_user:
+        users.delete_session(db, curr_user)
+        response.delete_cookie(COOKIE_NAME)
     redirect('/')
 
 
