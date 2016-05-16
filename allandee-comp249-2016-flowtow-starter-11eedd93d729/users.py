@@ -9,6 +9,20 @@ COOKIE_NAME = 'sessionid'
 
 def check_login(db, usernick, password):
     """returns True if password matches stored"""
+    cur = db.cursor()
+    sql = """
+    select password from users where nick=?;
+    """
+    cur.execute(sql, (usernick,))
+    db_password = cur.fetchone()    #remember password is encoded
+    if db_password:
+        if db_password[0] == db.encode(password):
+            return True
+        else:
+            return False
+    else:
+        return False
+
 
 
 
@@ -67,7 +81,6 @@ def session_user(db):
     cur.execute(sql)
     curr_user = cur.fetchone()
     if curr_user:
-        print(curr_user)
         return curr_user[0]
     else:
         return None

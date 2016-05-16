@@ -28,9 +28,10 @@ def index():
 @application.post('/login')
 def login():
     db = COMP249Db()
-    if 'nick' in request.forms:
-        curr_session = None
-        curr_session = users.generate_session(db, request.forms['nick'])
+    in_user = request.forms['nick']
+    in_password = request.forms['password']
+    if users.check_login(db, in_user, in_password):
+        curr_session = users.generate_session(db, in_user)
         if curr_session:
             response.set_cookie(COOKIE_NAME, curr_session)
     redirect('/')
