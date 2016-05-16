@@ -17,10 +17,12 @@ application = Bottle()
 def index():
     db = COMP249Db()
     curr_session = None
+    curr_user = None
     if request.get_cookie(COOKIE_NAME):
         curr_session = request.get_cookie(COOKIE_NAME)
+        curr_user = users.session_user(db)
     img_list = interface.list_images(db, 3)
-    return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_session)
+    return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_user)
 
 
 @application.post('/login')
