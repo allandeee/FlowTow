@@ -75,18 +75,12 @@ def session_user(db):
     retrieve the user from the sessions table
     return usernick or None if no valid session is present"""
     cur = db.cursor()
-    curr_session = bottle.request.get_cookie(COOKIE_NAME)
     sql = """
     select usernick from sessions;
     """
     cur.execute(sql)
-    curr_users = []
-    for t in cur:
-        for i in t:
-            if db.encode(i) == curr_session:
-                curr_users.append(i)
-                break
-    if curr_users:
-        return curr_users[0]
+    curr_user = cur.fetchone()
+    if curr_user:
+        return curr_user[0]
     else:
         return None
