@@ -17,7 +17,7 @@
                 <li>
                     <a id="logo" href="/">FlowTow</a>
                 </li>
-                <li><a href="#">My Images</a></li>
+                <li><a href="/my">My Images</a></li>
                 <li><a href="/about">About this site</a></li>
 
                 % if session:

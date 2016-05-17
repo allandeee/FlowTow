@@ -10,14 +10,25 @@ def list_images(db, n, usernick=None):
     The 'likes' value will be a count of the number of likes for this image as returned by count_likes.
     If usernick is given, then only images belonging to that user are returned."""
     cur = db.cursor()
-    sql = """
-    select * from (
-    select * from images
-    order by timestamp DESC
-    )
-    limit %i;
-    """
-    cur.execute(sql % (n,))
+    if usernick:
+        sql = """
+        select * from (
+        select * from images
+        order by timestamp DESC
+        )
+        where usernick=?
+        limit ?;
+        """
+        cur.execute(sql, (usernick, n))
+    else:
+        sql = """
+        select * from (
+        select * from images
+        order by timestamp DESC
+        )
+        limit ?;
+        """
+        cur.execute(sql, (n,))
     img_list = (list(cur))
     dict_list = []
     for i in img_list:
