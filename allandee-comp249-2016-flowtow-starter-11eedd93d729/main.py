@@ -25,6 +25,28 @@ def index():
     return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_user)
 
 
+@application.route('/about')
+def aboutpg():
+    db = COMP249Db()
+    curr_session = None
+    curr_user = None
+    if request.get_cookie(COOKIE_NAME):
+        curr_session = request.get_cookie(COOKIE_NAME)
+        curr_user = users.session_user(db)
+    return template('aboutpg.html', title="About", session=curr_session, name=curr_user)
+
+
+@application.route('/loginfail')
+def loginfail():
+    db = COMP249Db()
+    curr_session = None
+    curr_user = None
+    if request.get_cookie(COOKIE_NAME):
+        curr_session = request.get_cookie(COOKIE_NAME)
+        curr_user = users.session_user(db)
+    return template('loginfail.html', title="Login Error", session=curr_session, name=curr_user)
+
+
 @application.post('/login')
 def login():
     db = COMP249Db()
@@ -34,7 +56,9 @@ def login():
         curr_session = users.generate_session(db, in_user)
         if curr_session:
             response.set_cookie(COOKIE_NAME, curr_session)
-    redirect('/')
+        redirect('/')
+    else:
+        return template('loginfail.html', title="Login Error", session=None, name=None)
 
 
 @application.post('/logout')
@@ -53,12 +77,6 @@ def like_img():
     img_liked = request.forms.get('filename')
     interface.add_like(db, img_liked)
     redirect('/')
-
-
-@application.route('/about')
-def aboutpg():
-
-    return template('aboutpg.html', title="About")
 
 
 @application.route('/static/<filename:path>')
