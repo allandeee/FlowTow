@@ -34,8 +34,8 @@ def generate_session(db, usernick):
     """
     cur = db.cursor()
 
-    curr_user = session_user(db)
-    if curr_user:
+    curr_user = bottle.request.get_cookie(COOKIE_NAME)
+    if curr_user == db.encode(usernick):
         return db.encode(curr_user)     # can be assumed the sessionid in db is the same
 
     sql = """
