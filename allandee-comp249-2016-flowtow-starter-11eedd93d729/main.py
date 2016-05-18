@@ -81,6 +81,7 @@ def like_img():
     redirect('/')
 
 
+@application.route('/upload')
 @application.post('/upload')
 def upload():
     db = COMP249Db()
