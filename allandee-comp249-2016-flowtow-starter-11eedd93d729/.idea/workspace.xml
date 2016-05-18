@@ -31,6 +31,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.021739">
+              <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="aboutpg.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/aboutpg.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="215" column="1" selection-start-line="215" selection-start-column="1" selection-end-line="215" selection-end-column="1" />
+              <caret line="323" column="1" selection-start-line="323" selection-start-column="1" selection-end-line="323" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -78,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/interface.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -87,18 +97,8 @@
       <file leaf-file-name="users.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/users.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4776564">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level3_unit.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/level3_unit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5590864">
+              <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -108,20 +108,10 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
               <folding>
                 <element signature="e#18#102#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level3_functional.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/level3_functional.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -139,14 +129,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/level1_functional.py" />
-        <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/views/aboutpg.html" />
         <option value="$PROJECT_DIR$/views/loginfail.html" />
-        <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/views/base.tpl" />
         <option value="$PROJECT_DIR$/interface.py" />
         <option value="$PROJECT_DIR$/users.py" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/static/style.css" />
       </list>
     </option>
   </component>
@@ -239,7 +229,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in level3_unit">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="Unittests in level2_unit" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -251,28 +241,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="allandee-comp249-2016-flowtow-starter-11eedd93d729" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/level2_unit.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in level2_functional" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="allandee-comp249-2016-flowtow-starter-11eedd93d729" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/level2_functional.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -338,6 +306,28 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest Test.test_session_user" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="allandee-comp249-2016-flowtow-starter-11eedd93d729" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/level3_unit.py" />
+      <option name="CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="test_session_user" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -469,18 +459,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in level2_unit" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in level2_functional" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in level3_functional" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in level3_unit" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in level3_functional" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in level3_unit" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest Test.test_session_user" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in level3_unit" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in level3_functional" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in level2_unit" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in level2_functional" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in level3_unit" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest Test.test_session_user" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in level3_functional" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in level2_unit" />
       </list>
     </recent_temporary>
   </component>
@@ -498,34 +488,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_level2_unit - 2016.05.10 at 15h 07m 26s.xml">
-      <configuration name="Unittests in level2_unit" configurationId="tests" />
+    <history-entry file="Unittest_Test_test_session_user - 2016.05.18 at 16h 51m 33s.xml">
+      <configuration name="Unittest Test.test_session_user" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_level2_unit - 2016.05.10 at 15h 08m 16s.xml">
-      <configuration name="Unittests in level2_unit" configurationId="tests" />
+    <history-entry file="Unittest_Test_test_session_user - 2016.05.18 at 16h 52m 32s.xml">
+      <configuration name="Unittest Test.test_session_user" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.16 at 19h 26m 33s.xml">
-      <configuration name="Unittests in level3_functional" configurationId="tests" />
+    <history-entry file="Unittest_Test_test_session_user - 2016.05.18 at 16h 57m 34s.xml">
+      <configuration name="Unittest Test.test_session_user" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.17 at 19h 13m 25s.xml">
-      <configuration name="Unittests in level3_functional" configurationId="tests" />
+    <history-entry file="Unittest_Test_test_session_user - 2016.05.18 at 16h 57m 47s.xml">
+      <configuration name="Unittest Test.test_session_user" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.17 at 19h 24m 56s.xml">
-      <configuration name="Unittests in level3_functional" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.17 at 19h 34m 03s.xml">
-      <configuration name="Unittests in level3_functional" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.17 at 19h 44m 46s.xml">
-      <configuration name="Unittests in level3_functional" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.17 at 19h 47m 48s.xml">
-      <configuration name="Unittests in level3_functional" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_level3_functional - 2016.05.17 at 21h 08m 28s.xml">
+    <history-entry file="Unittests_in_level3_functional - 2016.05.18 at 16h 02m 02s.xml">
       <configuration name="Unittests in level3_functional" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_level3_unit - 2016.05.17 at 21h 45m 23s.xml">
+      <configuration name="Unittests in level3_unit" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_level3_unit - 2016.05.18 at 15h 56m 38s.xml">
+      <configuration name="Unittests in level3_unit" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_level3_unit - 2016.05.18 at 16h 49m 05s.xml">
+      <configuration name="Unittests in level3_unit" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_level3_unit - 2016.05.18 at 16h 51m 25s.xml">
+      <configuration name="Unittests in level3_unit" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_level3_unit - 2016.05.18 at 16h 58m 05s.xml">
       <configuration name="Unittests in level3_unit" configurationId="tests" />
     </history-entry>
   </component>
@@ -538,7 +528,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3105023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3105023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1115625" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -873,14 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/loginfail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -900,10 +882,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.css">
+    <entry file="file://$PROJECT_DIR$/interface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="215" column="1" selection-start-line="215" selection-start-column="1" selection-end-line="215" selection-end-column="1" />
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level3_functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level3_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -912,22 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level3_functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -943,25 +925,33 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
           <folding>
             <element signature="e#18#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/level3_unit.py">
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.021739">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <caret line="323" column="1" selection-start-line="323" selection-start-column="1" selection-end-line="323" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4776564">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.5590864">
+          <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
           <folding />
         </state>
       </provider>

@@ -34,19 +34,22 @@ def generate_session(db, usernick):
     """
     cur = db.cursor()
 
-    curr_user = bottle.request.get_cookie(COOKIE_NAME)
-    if curr_user == db.encode(usernick):
-        return db.encode(curr_user)     # can be assumed the sessionid in db is the same
-
     sql = """
-    select exists(
-    select 1 from users where nick=?
-    );
+    select nick from users where nick=?;
     """
     cur.execute(sql, (usernick,))
-    user_exists = cur.fetchone()[0]
+    db_user = cur.fetchone()
+    if not db_user:
+        return None
 
-    if user_exists==1:
+    sql = """
+    select sessionid from sessions where usernick=?;
+    """
+    cur.execute(sql, (usernick,))
+    curr_sessions = cur.fetchone()
+    if curr_sessions:
+        return curr_sessions[0]
+    else:
         session_key = db.encode(usernick)
         sql = """
         insert into sessions (sessionid, usernick) values (?, ?);
@@ -54,8 +57,8 @@ def generate_session(db, usernick):
         cur.execute(sql, (session_key, usernick))
         db.commit()
         bottle.response.set_cookie(COOKIE_NAME, session_key)
-    else:
-        return None
+        return session_key
+    # curr_user = bottle.request.get_cookie(COOKIE_NAME)
 
 
 
@@ -74,11 +77,12 @@ def session_user(db):
     """try to
     retrieve the user from the sessions table
     return usernick or None if no valid session is present"""
+    curr_session = bottle.request.get_cookie(COOKIE_NAME)
     cur = db.cursor()
     sql = """
-    select usernick from sessions;
+    select usernick from sessions where sessionid=?;
     """
-    cur.execute(sql)
+    cur.execute(sql, (curr_session,))
     curr_user = cur.fetchone()
     if curr_user:
         return curr_user[0]
