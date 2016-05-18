@@ -31,8 +31,23 @@
             <div>
                 <h1 id="banner">Welcome to FlowTow</h1>
             </div>
-            % for img in images:
+            <form id="uploadform" action="/upload" method="post" enctype="multipart/form-data">
+                <div>
+                    % if session:
+                    <div id="upload">
+                        <div id="up_section">
+                            <input type="file" name="imagefile">
+                            <p class="help-text">
+                                Select an image file to upload (JPG, PNG or GIF).
+                            </p>
+                            <input type="submit" value="Submit" id="upload_button">
+                        </div>
+                    </div>
+                    % end
+                </div>
+            </form>
 
+            % for img in images:
             <div class='flowtow'>
                 <div class='image'>
                     <img src="/static/images/{{img['filename']}}" alt={{img[ 'filename'].split( ".")[0]}}>

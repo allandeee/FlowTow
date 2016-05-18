@@ -246,7 +246,7 @@ body {
     background-color: white;
     font-family: 'Pacifico', cursive;
     font-size: 28px;
-    margin-top: 45px;
+    margin-top: 30px;
     font-weight: 500;
     padding: 5px 100px;
 }
@@ -322,6 +322,47 @@ img {
 .flowtow .likeClicked {
     background-color: #E74C3C;
 }
+
+#upload {
+    display: inline-block;
+    background-color: white;
+    margin-top: 30px;
+    font-weight: 400;
+    padding: 5px 100px;
+    max-width: 400px;
+}
+
+#up_section {
+    padding: 7px;
+}
+
+.help-text {
+    font-size: 14px;
+    color: #424242;
+    margin: 10px;
+}
+
+#upload_button {
+    background-color: #B3B6B7;
+    border: none;
+    color: white;
+    padding: 3px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#upload_button:hover {
+    cursor: pointer;
+    background-color: #3498DB;
+}
+
 
 .text {
     display: inline-block;

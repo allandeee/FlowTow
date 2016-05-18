@@ -3,8 +3,7 @@
 '''
 
 from bottle import Bottle, template, debug, static_file, request, redirect, response
-import interface
-import users
+import interface, users, os
 from database import COMP249Db
 
 
@@ -80,6 +79,28 @@ def like_img():
     img_liked = request.forms.get('filename')
     interface.add_like(db, img_liked)
     redirect('/')
+
+
+@application.post('/upload')
+def upload():
+    db = COMP249Db()
+
+    curr_user = users.session_user(db)
+    if not curr_user:
+        redirect('/')
+
+    imagefile = request.files.get('imagefile')
+    name, ext = os.path.splitext(imagefile.filename)
+    if ext not in ('.jpeg', '.jpg', '.png', '.gif'):
+        print("extension error")
+        return template('loginfail.html', title="Login Error", session=None, name=None)
+
+    save_path = os.path.join('static', 'images', imagefile.filename)
+    imagefile.save(save_path)
+
+    interface.add_image(db, imagefile.filename, curr_user)
+
+    redirect('/my')
 
 
 @application.route('/static/<filename:path>')
