@@ -9,6 +9,8 @@ from database import COMP249Db
 
 COOKIE_NAME = 'sessionid'
 
+UPLOAD_DIR = os.path.join('static', 'images')
+
 application = Bottle()
 
 
@@ -95,11 +97,25 @@ def upload():
         print("extension error")
         return template('loginfail.html', title="Login Error", session=None, name=None)
 
-    save_path = os.path.join('static', 'images', imagefile.filename)
+    save_path = os.path.join(UPLOAD_DIR, imagefile.filename)
     imagefile.save(save_path)
 
     interface.add_image(db, imagefile.filename, curr_user)
 
+    redirect('/my')
+
+
+@application.post('/delete')
+def delete():
+    db = COMP249Db()
+
+    curr_user = users.session_user(db)
+    if not curr_user:
+        redirect('/')
+
+    img = request.forms.get('filename')
+    interface.delete_image(db, img, curr_user)
+    os.remove(os.path.join(UPLOAD_DIR, img))
     redirect('/my')
 
 

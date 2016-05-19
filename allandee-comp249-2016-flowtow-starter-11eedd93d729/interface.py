@@ -51,6 +51,22 @@ def add_image(db, filename, usernick):
     db.commit()
 
 
+def delete_image(db, filename, usernick):
+    """Delete image from the database and all the likes attached to it"""
+    cur = db.cursor()
+    sql = """
+    delete from images where filename=? and usernick=?;
+    """
+    cur.execute(sql, (filename, usernick))
+    db.commit()
+
+    sql = """
+    delete from likes where filename=?;
+    """
+    cur.execute(sql, (filename,))
+    db.commit()
+
+
 def add_like(db, filename, usernick=None):
     """Increment the like count for this image"""
     cur = db.cursor()
