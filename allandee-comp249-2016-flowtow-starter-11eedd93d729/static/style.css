@@ -287,7 +287,6 @@ img {
 
 .flowtow .likediv {
     font-size: 14px;
-    float: left;
     margin-bottom: 5px;
 }
 
@@ -297,7 +296,7 @@ img {
 }
 
 .flowtow .likebutton {
-    float: right;
+    float: left;
     background-color: #B3B6B7;
     border: none;
     color: white;
@@ -316,11 +315,34 @@ img {
 
 .flowtow .likebutton:hover {
     cursor: pointer;
-    background-color: #F1948A;
+    background-color: #3498DB;
 }
 
 .flowtow .likeClicked {
-    background-color: #E74C3C;
+    background-color: #85C1E9;
+}
+
+.flowtow .delete {
+    float: right;
+    background-color: #B3B6B7;
+    border: none;
+    color: white;
+    padding: 3px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.flowtow .delete:hover {
+    cursor: pointer;
+    background-color: #F1948A;
 }
 
 #upload {
@@ -362,7 +384,6 @@ img {
     cursor: pointer;
     background-color: #3498DB;
 }
-
 
 .text {
     display: inline-block;
