@@ -322,6 +322,29 @@ img {
     background-color: #85C1E9;
 }
 
+.flowtow .unlikebutton {
+    float: left;
+    background-color: #85C1E9;
+    border: none;
+    color: white;
+    padding: 3px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.flowtow .unlikebutton:hover {
+    cursor: pointer;
+    background-color: #3498DB;
+}
+
 .flowtow .delete {
     float: right;
     background-color: #B3B6B7;

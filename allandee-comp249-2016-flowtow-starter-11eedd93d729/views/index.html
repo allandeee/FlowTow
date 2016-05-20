@@ -54,11 +54,21 @@
                     <p class='date'>{{img['timestamp']}}</p>
                     <p class='user'>{{img['user']}}</p>
                     <p class='likediv'><b class="likes">{{img['likes']}}</b> likes</p>
-                    <form action="/like" method="post">
-                        <input type="hidden" name="filename" value="{{img['filename']}}">
-                        <!--hidden field for usernick (the user liking the image)-->
-                        <input type="submit" value="Like" class='likebutton'>
-                    </form>
+                    % if session:
+                        % if not interface.like_exists(db, img['filename'], name):
+                        <form action="/like" method="post">
+                            <input type="hidden" name="filename" value="{{img['filename']}}">
+                            <!--hidden field for usernick (the user liking the image)-->
+                            <input type="submit" value="Like" class='likebutton'>
+                        </form>
+                        % else:
+                        <form action="/unlike" method="post">
+                            <input type="hidden" name="filename" value="{{img['filename']}}">
+                            <!--hidden field for usernick (the user liking the image)-->
+                            <input type="submit" value="Unlike" class='unlikebutton'>
+                        </form>
+                        % end
+                    % end
                     % if img['user'] == name:
                     <form action="/delete" method="post">
                         <input type="hidden" name="filename" value="{{img['filename']}}">

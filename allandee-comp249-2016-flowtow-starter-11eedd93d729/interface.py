@@ -68,7 +68,8 @@ def delete_image(db, filename, usernick):
 
 
 def add_like(db, filename, usernick=None):
-    """Increment the like count for this image"""
+    """Increment the like count for this image,
+    anonymous likes are no longer accepted"""
     cur = db.cursor()
 
     sql = """
@@ -79,7 +80,7 @@ def add_like(db, filename, usernick=None):
     cur.execute(sql, (usernick,))
     user_exists = cur.fetchone()[0]
 
-    if user_exists==1 or usernick is None:
+    if user_exists==1:      # or usernick is None
         sql = """
         select exists(
         select 1 from images where filename=?
@@ -95,6 +96,35 @@ def add_like(db, filename, usernick=None):
             cur.execute(sql, (filename, usernick))
             db.commit()
 
+
+def like_exists(db, filename, user):
+    """Checks to see if user currently likes the image"""
+    print(filename)
+    print(user)
+    cur = db.cursor()
+    sql = """
+    select * from likes where filename=? and usernick=?;
+    """
+    cur.execute(sql, (filename, user))
+    all = cur.fetchall()
+    print(all)
+    if len(all) > 0:
+        return True
+    else:
+        return False
+
+
+def unlike(db, filename, user):
+    """Removes current like from likes table.
+    If more than 1 like has been stored in the likes table, then all
+    will be deleted."""
+    cur = db.cursor()
+    if like_exists(db, filename, user):
+        sql = """
+        delete from likes where filename=? and usernick=?;
+        """
+        cur.execute(sql, (filename, user))
+        db.commit()
 
 def count_likes(db, filename):
     """Count the number of likes for this filename"""

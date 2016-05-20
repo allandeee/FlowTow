@@ -19,11 +19,13 @@ def index():
     db = COMP249Db()
     curr_session = None
     curr_user = None
+    img_list = interface.list_images(db, 3)
     if request.get_cookie(COOKIE_NAME):
         curr_session = request.get_cookie(COOKIE_NAME)
         curr_user = users.session_user(db)
-    img_list = interface.list_images(db, 3)
-    return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_user)
+    bool_arr = []
+    return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_user,
+                    interface=interface, db=db)
 
 
 @application.route('/about')
@@ -48,7 +50,8 @@ def my():
     else:
         redirect('/')
     img_list = interface.list_images(db, 3, curr_user)
-    return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_user)
+    return template('index.html', title="FlowTow", images=img_list, session=curr_session, name=curr_user,
+                    interface=interface, db=db)
 
 
 @application.post('/login')
@@ -79,7 +82,21 @@ def logout():
 def like_img():
     db = COMP249Db()
     img_liked = request.forms.get('filename')
-    interface.add_like(db, img_liked)
+    curr_user = None
+    if request.get_cookie(COOKIE_NAME):
+        curr_user = users.session_user(db)
+    interface.add_like(db, img_liked, curr_user)
+    redirect('/')
+
+
+@application.post('/unlike')
+def unlike():
+    db = COMP249Db()
+    img = request.forms.get('filename')
+    curr_user = None
+    if request.get_cookie(COOKIE_NAME):
+        curr_user = users.session_user(db)
+    interface.unlike(db, img, curr_user)
     redirect('/')
 
 
