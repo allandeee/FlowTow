@@ -169,7 +169,7 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: 'Crimson Text', serif;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .nav li {
@@ -177,10 +177,15 @@ body {
     vertical-align: middle;
 }
 
+.nav form {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .nav li a {
     display: inline-block;
     vertical-align: middle;
-    margin: 5px 300px 5px 5px;
+    margin: 5px 150px 5px 5px;
     text-decoration: none;
     padding-top: 0;
 }
@@ -197,7 +202,7 @@ body {
     color: red;
 }
 
-#logbutton {
+.logbutton {
     background-color: #404040;
     border: none;
     color: white;
@@ -213,19 +218,37 @@ body {
     transition-duration: 0.4s;
 }
 
-#logbutton:hover {
+.logbutton:hover {
     background-color: #666666;
     cursor: pointer;
     cursor: hand;
 }
 
 #logo {
-    max-width: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px 300px 2px 5px;
+    width: 160px;
+    height: 40px;
+    background-image: url(images/logo.png);
+    background-repeat: none;
+    background-size: cover;
+    text-indent: -9999px;
 }
 
 .content {
     display: block;
     font-family: 'Crimson Text', serif;
+}
+
+#banner {
+    display: inline-block;
+    background-color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    margin-top: 30px;
+    font-weight: 500;
+    padding: 5px 100px;
 }
 
 .flowtow {
@@ -264,7 +287,6 @@ img {
 
 .flowtow .likediv {
     font-size: 14px;
-    float: left;
     margin-bottom: 5px;
 }
 
@@ -274,14 +296,14 @@ img {
 }
 
 .flowtow .likebutton {
-    float: right;
+    float: left;
     background-color: #B3B6B7;
     border: none;
     color: white;
-    padding: 5px 14px;
+    padding: 3px 14px;
     text-align: center;
     display: inline-block;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Crimson Text', serif;
     margin-top: 0;
     margin-bottom: 5px;
@@ -293,11 +315,97 @@ img {
 
 .flowtow .likebutton:hover {
     cursor: pointer;
-    background-color: #F1948A;
+    background-color: #3498DB;
 }
 
 .flowtow .likeClicked {
-    background-color: #E74C3C;
+    background-color: #85C1E9;
+}
+
+.flowtow .unlikebutton {
+    float: left;
+    background-color: #85C1E9;
+    border: none;
+    color: white;
+    padding: 3px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.flowtow .unlikebutton:hover {
+    cursor: pointer;
+    background-color: #3498DB;
+}
+
+.flowtow .delete {
+    float: right;
+    background-color: #B3B6B7;
+    border: none;
+    color: white;
+    padding: 3px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.flowtow .delete:hover {
+    cursor: pointer;
+    background-color: #F1948A;
+}
+
+#upload {
+    display: inline-block;
+    background-color: white;
+    margin-top: 30px;
+    font-weight: 400;
+    padding: 5px 100px;
+    max-width: 400px;
+}
+
+#up_section {
+    padding: 7px;
+}
+
+.help-text {
+    font-size: 14px;
+    color: #424242;
+    margin: 10px;
+}
+
+#upload_button {
+    background-color: #B3B6B7;
+    border: none;
+    color: white;
+    padding: 3px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Crimson Text', serif;
+    margin-top: 0;
+    border-radius: 3px;
+    /* Safari */
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#upload_button:hover {
+    cursor: pointer;
+    background-color: #3498DB;
 }
 
 .text {
