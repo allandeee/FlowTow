@@ -99,15 +99,12 @@ def add_like(db, filename, usernick=None):
 
 def like_exists(db, filename, user):
     """Checks to see if user currently likes the image"""
-    print(filename)
-    print(user)
     cur = db.cursor()
     sql = """
     select * from likes where filename=? and usernick=?;
     """
     cur.execute(sql, (filename, user))
     all = cur.fetchall()
-    print(all)
     if len(all) > 0:
         return True
     else:

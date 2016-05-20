@@ -43,7 +43,25 @@ class Level5FunctionalTests(unittest.TestCase):
 
         (password, nick, avatar) = self.users[0]
 
+        response = self.app.get('/')
+        button = response.html.find_all(class_='delete')
+        self.assertEqual([], button, "delete button does not exist on page")
+
         self.doLogin(nick, password)
 
         # delete buttons are present in my images
+        response = self.app.get('/my')
+        button = response.html.find_all(class_='delete')
+        self.assertNotEqual([], button, "delete button exists on page")
 
+    def test_delete_image(self):
+        """As a user, when I login, I am able to delete my images"""
+
+
+    def test_unlike_forms(self):
+        """As a user, when I'm logged in and I see an image I have like,
+        I see a button to 'Unlike' the image"""
+
+    def test_unlike(self):
+        """"As a user, when I unlike an image, I am redirected to the index
+        and the image I unliked now has the option to be liked again"""
